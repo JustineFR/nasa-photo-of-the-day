@@ -8,9 +8,9 @@ function App() {
 
     useEffect(() => {
         axios
-        .get(`https://api.nasa.gov/planetary/apod?api_key=6zMXmXOQjGn6negHi0fWpJJU1KDdEuQ4qLZ3y9gx`)
+        .get('https://api.nasa.gov/planetary/apod?api_key=6zMXmXOQjGn6negHi0fWpJJU1KDdEuQ4qLZ3y9gx')
         .then(response => {
-          console.log(response.data);
+          // console.log(response.data);
           const data = response.data;
           setInfo(data)
         })
