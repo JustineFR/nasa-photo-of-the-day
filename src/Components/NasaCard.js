@@ -1,19 +1,37 @@
-import React, { useState, useEffect } from "react";
-import App from "../App";
+import React from "react";
+import NasaImage from "./Image";
+import styled from 'styled-components';
+
+const Expl = styled.div `
+  color: black;
+  width: 500px;
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+  border: 1.5px solid #c72223;
+`;
+
 
 
 function NasaCard(props) {
-  console.log(props)
+  // console.log(props)
 
     return (
       <div>
         <h2>{props.title}</h2>
         <h3>{props.date}</h3>
-        <img src={props.url} alt="photo of the day by nasa"></img>
-        <p>{props.explanation}</p>
+       
+        
+          <NasaImage url={props.url} />
+          
+          <Expl>
+            <p>{props.explanation}</p>
+          </Expl>
+        
+
       </div>
     )
-
+    
 }
 
 export default NasaCard;
